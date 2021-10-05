@@ -41,12 +41,14 @@ require 'db_conn.php';
                         class="remove-to-do">x</span>
             <?php if ($todo['checked']) {?>
                 <input type="checkbox"
-                        class="checked"
+                        class="check-box"
+                       data-todo-id ="<?php echo $todo['id'];?>"
                         checked />
                 <h2 class="checked"><?php echo $todo['title']?></h2>
             <?php }else  { ?>
                 <input type="checkbox"
-                       class="checked" />
+                       data-todo-id ="<?php echo $todo['id'];?>"
+                       class="check-box" />
                 <h2><?php echo $todo['title']?></h2>
             <?php }?>
             <br>
@@ -56,5 +58,48 @@ require 'db_conn.php';
     </div>
 </div>
 
+<script src="jquery-3.2.1.min.js"></script>
+
+<script>
+    $(document).ready(function (){
+        $('.remove-to-do').click(function () {
+            const id = $(this).attr('id');
+
+            $.post("remove.php",
+                {
+                    id:id
+                },
+                (data) => {
+                    if (data){
+                        $(this).parent().hide(600);
+                    }
+                }
+            );
+        });
+
+        $(".check-box").click(function (e) {
+            const id = $(this).attr('data-todo-id');
+
+            $.post("check.php",
+                {
+                    id: id
+                },
+                (data) => {
+                    if (data != 'error'){
+                        const h2 = $(this).next();
+                        if (data === '1'){
+                            h2.removeClass('checked');
+                        }else {
+                            h2.addClass('checked');
+                        }
+                    }
+                }
+
+            );
+
+        })
+
+    });
+</script>
 </body>
 </html>
