@@ -5,6 +5,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo list</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 <div class="main-section">
@@ -19,7 +20,7 @@
             <input type="checkbox">
             <h2>This is sdhfikh</h2>
             <br>
-            <small>Created for Concon Solutions</small>
+            <small>Created in 05/10/2021</small>
         </div>
     </div>
 </div>
