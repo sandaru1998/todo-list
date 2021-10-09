@@ -1,5 +1,5 @@
 body {
-    background: #097969;
+    background: #027867;
 }
 * {
     padding: 0px;
@@ -10,7 +10,7 @@ body {
 .main-section {
     background: transparent;
     max-width: 500px;
-    width: 90%;
+    width: 95%;
     height: 500px;
     margin: 30px auto;
     border-radius: 10px;
@@ -44,7 +44,7 @@ body {
     outline: none;
     background: #ff8700;
     color: #fff;
-    font-family: sans-serif;
+    font-family: Monospace;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
@@ -59,8 +59,8 @@ body {
     border: 1px solid #fff;
     border-radius: 50%;
     display: inline-block;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 #errorMes {
@@ -93,7 +93,7 @@ body {
     display: inline-block;
     padding: 5px 0px;
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: Monospace;
     color: #555;
 }
 
@@ -104,7 +104,7 @@ body {
     color: #888;
     padding-left: 30px;
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: Monospace;
 }
 
 .remove-to-do {
@@ -112,7 +112,7 @@ body {
     float: right;
     width: 20px;
     height: 20px;
-    font-family: sans-serif;
+    font-family: Monospace;
     color: rgb(139, 97, 93);
     text-decoration: none;
     text-align: right;
@@ -137,8 +137,8 @@ body {
 }
 
 .empty {
-    font-family: sans-serif;
-    font-size: 16px;
+    font-family: Monospace;
+    font-size: 18px;
     text-align: center;
     color: #cccc;
 }
